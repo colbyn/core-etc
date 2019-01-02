@@ -110,11 +110,6 @@ import Core.Service.Aws.Internal.Utils
 
 -- {-# ANN module ("HLint: ignore" :: Pre.String) #-}
 
--- deriving instance Ord AwsDyn.AttributeValue
--- deriving instance Ord AwsDyn.ConsumedCapacity
-
-instance Ord AwsDyn.AttributeValue where
-  compare x y = compare (toValue x) (toValue y)
 
 
 toValue :: AwsDyn.AttributeValue -> Maybe Value
@@ -525,4 +520,29 @@ convertToQueryOutput x =
     
     status :: Int
     status = x ^. AwsDyn.qrsResponseStatus
+
+
+-------------------------------------------------------------------------------
+-- Internal - Instances
+-------------------------------------------------------------------------------
+
+-- deriving instance Ord AwsDyn.AttributeValue
+-- deriving instance Ord AwsDyn.ConsumedCapacity
+
+instance Ord AwsDyn.AttributeValue where
+  compare x y = compare (toValue x) (toValue y)
+
+instance Render.Renderable AwsDyn.ItemCollectionMetrics where
+  manifest = Render.manifest . Text.pack . show
+instance Render.Renderable AwsDyn.ReturnConsumedCapacity where
+  manifest = Render.manifest . Text.pack . show
+instance Render.Renderable AwsDyn.ReturnItemCollectionMetrics where
+  manifest = Render.manifest . Text.pack . show
+instance Render.Renderable AwsDyn.ConsumedCapacity where
+  manifest = Render.manifest . Text.pack . show
+instance Render.Renderable AwsDyn.ReturnValue where
+  manifest = Render.manifest . Text.pack . show
+instance Render.Renderable AwsDyn.Select where
+  manifest = Render.manifest . Text.pack . show
+
 
