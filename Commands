@@ -1,0 +1,13 @@
+command publish do
+  echo "Publishing..."
+  silent do
+    git add .
+    git commit -m "auto"
+    git push -u origin master
+    echo "complete"
+  echo "Complete."
+  git --no-pager log --name-status HEAD^..HEAD | grep commit
+
+command log::latest do
+  git --no-pager log --name-status HEAD^..HEAD | grep commit
+

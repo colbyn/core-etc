@@ -1,0 +1,86 @@
+name: core-etc
+version: 0.1.0.0
+dependencies:
+- base >= 4.7 && < 5
+- core
+- async
+- bytestring
+- containers
+- mtl
+- stm
+- text
+- transformers
+- unordered-containers
+- vector
+- filepath
+- directory
+- unix
+- uniplate
+- contravariant
+- contravariant-extras
+- show-prettyprint
+- wl-pprint-text
+- path
+- path-io
+- time
+- binary
+- deepseq
+- foldl
+- process
+- warp
+- warp-tls
+- wai
+- http-types
+- wai-extra
+- wai-app-static
+- aeson
+- temporary
+- JuicyPixels
+- jose
+- cryptonite
+- primitive
+- random
+- uuid
+- uuid-types
+- network-uri
+- lens
+- neat-interpolation
+- http-client
+- http-client-tls
+- amazonka
+- amazonka-s3
+- amazonka-ec2
+- amazonka-dynamodb
+- amazonka-dynamodb-streams
+- amazonka-lambda
+- http-media
+- file-embed
+- resourcet
+- conduit-extra
+- template-haskell
+- case-insensitive
+- base64-bytestring
+- memory
+- hspec
+
+default-extensions:
+  - NoImplicitPrelude
+  - PartialTypeSignatures
+  - OverloadedStrings
+  - OverloadedLabels
+  - TypeOperators
+  - DataKinds
+  - LambdaCase
+  - MultiParamTypeClasses
+  - FunctionalDependencies
+  - FlexibleContexts
+  - FlexibleInstances
+  - TypeFamilies
+  - TypeApplications
+  - ScopedTypeVariables
+
+
+library:
+  source-dirs:
+    - src
+

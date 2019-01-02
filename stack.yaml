@@ -1,0 +1,20 @@
+resolver: lts-12.7
+packages:
+- .
+
+extra-deps:
+- github: colbyn/core
+  commit: 6fd4a162846ea724ff67d556dc362d01e5589a23
+
+  # Until this is fixed: https://github.com/brendanhay/amazonka/issues/466
+- git: https://github.com/brendanhay/amazonka.git
+  commit: 248f7b2a7248222cc21cef6194cd1872ba99ac5d
+  subdirs:
+    - amazonka
+    - core
+    - amazonka-s3
+    - amazonka-ec2
+    - amazonka-dynamodb
+    - amazonka-dynamodb-streams
+    - amazonka-lambda
+
