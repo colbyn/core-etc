@@ -545,4 +545,5 @@ instance Render.Renderable AwsDyn.ReturnValue where
 instance Render.Renderable AwsDyn.Select where
   manifest = Render.manifest . Text.pack . show
 
+instance Render.Renderable AwsDyn.AttributeValue
 
