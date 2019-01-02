@@ -532,18 +532,11 @@ convertToQueryOutput x =
 instance Ord AwsDyn.AttributeValue where
   compare x y = compare (toValue x) (toValue y)
 
-instance Render.Renderable AwsDyn.ItemCollectionMetrics where
-  manifest = Render.manifest . Text.pack . show
-instance Render.Renderable AwsDyn.ReturnConsumedCapacity where
-  manifest = Render.manifest . Text.pack . show
-instance Render.Renderable AwsDyn.ReturnItemCollectionMetrics where
-  manifest = Render.manifest . Text.pack . show
-instance Render.Renderable AwsDyn.ConsumedCapacity where
-  manifest = Render.manifest . Text.pack . show
-instance Render.Renderable AwsDyn.ReturnValue where
-  manifest = Render.manifest . Text.pack . show
-instance Render.Renderable AwsDyn.Select where
-  manifest = Render.manifest . Text.pack . show
-
+instance Render.Renderable AwsDyn.ItemCollectionMetrics
+instance Render.Renderable AwsDyn.ReturnConsumedCapacity
+instance Render.Renderable AwsDyn.ReturnItemCollectionMetrics
+instance Render.Renderable AwsDyn.ConsumedCapacity
+instance Render.Renderable AwsDyn.ReturnValue
+instance Render.Renderable AwsDyn.Select
 instance Render.Renderable AwsDyn.AttributeValue
 
